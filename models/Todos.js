@@ -6,13 +6,14 @@ const todoSchema = new Schema({
     type: String,
     required: true
   },
-  nama: {
-    type: String,
-    required: true
+  status: {
+    type: Boolean,
+    required: true,
+    default: false
   },
-  email: {
-    type: String,
-    required: true
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: "users"
   }
 });
 
